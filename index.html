@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vaishnavi Jagdale | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f9ff;--surface:#fff;--text:#0b2540;--muted:#4a6783;--sky:#0ea5e9;--sky2:#38bdf8;--deep:#0369a1;--soft:#e0f2fe;--line:#cfe8fa;--shadow:0 10px 30px rgba(14,165,233,.15);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#06121f;--surface:#0c2036;--text:#e6f4ff;--muted:#9bb8d3;--soft:#0f2c47;--line:#17405f;--shadow:0 10px 30px rgba(0,0,0,.4);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#06121f;--surface:#0c2036;--text:#e6f4ff;--muted:#9bb8d3;--soft:#0f2c47;--line:#17405f;--shadow:0 10px 30px rgba(0,0,0,.4);color-scheme:dark}
+html{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surface);z-index:60}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--surface) 85%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{max-width:1100px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-weight:700;font-size:1.2rem;color:var(--sky)}
+.links{display:flex;gap:6px;align-items:center}
+.links a{padding:6px 12px;border-radius:99px;font-size:.88rem;color:var(--muted);transition:.25s}
+.links a:hover,.links a.on{background:var(--soft);color:var(--deep)}
+#tg,#menu{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:99px;width:38px;height:38px;cursor:pointer;font-size:1rem;transition:.25s}
+#tg:hover{transform:rotate(20deg);border-color:var(--sky)}
+#menu{display:none}
+section{max-width:1100px;margin:auto;padding:84px 22px 20px}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:8px}
+h2 span{color:var(--sky)}
+.sub{color:var(--muted);margin-bottom:34px}
+.hero{min-height:90vh;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:40px;position:relative}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.45;z-index:-1;animation:fl 9s ease-in-out infinite}
+.b1{width:320px;height:320px;background:var(--sky2);top:40px;right:-60px}
+.b2{width:240px;height:240px;background:#7dd3fc;bottom:30px;left:-70px;animation-delay:-4s}
+@keyframes fl{50%{transform:translate(20px,-30px) scale(1.1)}}
+.hi{color:var(--sky);font-weight:600}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);line-height:1.1;margin:8px 0}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--deep),var(--sky2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{font-size:1.25rem;height:2rem;color:var(--deep);font-weight:500}
+.role b{border-right:2px solid var(--sky);padding-right:4px;animation:bl .8s steps(1) infinite}
+@keyframes bl{50%{border-color:transparent}}
+.hero p.d{color:var(--muted);margin:14px 0 24px;max-width:540px}
+.btn{display:inline-block;padding:12px 26px;border-radius:99px;font-weight:600;font-size:.95rem;margin:0 10px 10px 0;transition:.3s;cursor:pointer;border:2px solid var(--sky)}
+.pri{background:linear-gradient(135deg,var(--sky),var(--deep));color:#fff;box-shadow:0 8px 22px rgba(14,165,233,.4)}
+.pri:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(14,165,233,.5)}
+.sec{color:var(--deep)}
+.sec:hover{background:var(--soft);transform:translateY(-3px)}
+.ph{display:flex;flex-direction:column;align-items:center;gap:14px}
+.ring{width:260px;height:260px;border-radius:50%;padding:7px;background:conic-gradient(var(--sky),var(--sky2),#bae6fd,var(--deep),var(--sky));animation:sp 14s linear infinite;box-shadow:var(--shadow)}
+@keyframes sp{to{transform:rotate(360deg)}}
+.av{width:100%;height:100%;border-radius:50%;background:var(--surface);display:grid;place-items:center;overflow:hidden;animation:sp 14s linear infinite reverse}
+.av span{font-size:4.2rem;font-weight:700;color:var(--sky)}
+.av img{width:100%;height:100%;object-fit:cover}
+.up{font-size:.8rem;color:var(--muted);cursor:pointer;border:1px dashed var(--sky);padding:5px 14px;border-radius:99px;transition:.25s}
+.up:hover{background:var(--soft)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow);transition:.35s}
+.card:hover{transform:translateY(-6px);border-color:var(--sky)}
+.stat{text-align:center}
+.stat b{display:block;font-size:1.8rem;color:var(--sky)}
+.stat small{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}
+.pd div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--line);font-size:.93rem}
+.pd div:last-child{border:0}
+.pd span{color:var(--muted)}
+.pd b{text-align:right;word-break:break-word}
+.tag{display:inline-block;background:var(--soft);color:var(--deep);padding:3px 12px;border-radius:99px;font-size:.78rem;font-weight:500;margin:8px 6px 0 0;transition:.25s}
+.card:hover .tag,.tag:hover{background:var(--sky);color:#fff}
+.date{color:var(--sky);font-size:.82rem;font-weight:600}
+h3{font-size:1.08rem;margin:4px 0}
+.card p,.card li{color:var(--muted);font-size:.92rem}
+.card ul{padding-left:18px;margin-top:6px}
+.tl{position:relative;padding-left:28px;border-left:3px solid var(--line)}
+.tl .card{margin-bottom:20px;position:relative}
+.tl .card::before{content:"";position:absolute;left:-39px;top:26px;width:15px;height:15px;border-radius:50%;background:var(--sky);border:3px solid var(--bg);box-shadow:0 0 0 3px var(--sky2)}
+.pj .ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--sky2),var(--deep));color:#fff;font-size:1.3rem;margin-bottom:10px}
+.sk h3{color:var(--deep);margin-bottom:6px}
+.bar{height:7px;background:var(--soft);border-radius:9px;overflow:hidden;margin-top:12px}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sky2),var(--deep));border-radius:9px;transition:width 1.3s ease}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+.rv.in .bar i{width:var(--w)}
+.ct{text-align:center}
+.ct .grid{margin-top:26px}
+.ct a.card{display:block}
+.ct .e{font-size:1.5rem}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:50px 22px 36px}
+@media(max-width:800px){.hero,.two{grid-template-columns:1fr}.ph{order:-1}.ring{width:210px;height:210px}.hero{min-height:auto;padding-top:40px}#menu{display:block}
+.links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--surface);padding:12px;border-bottom:1px solid var(--line)}.links.open{display:flex}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav><div class="nav"><a class="logo" href="#home" data-s="home">VJ.</a>
+<div class="links" id="ln"><a data-s="home">Home</a><a data-s="about">About</a><a data-s="edu">Education</a><a data-s="exp">Experience</a><a data-s="proj">Projects</a><a data-s="skills">Skills</a><a data-s="contact">Contact</a></div>
+<div style="display:flex;gap:8px"><button id="tg" aria-label="Toggle theme">🌓</button><button id="menu" aria-label="Menu">☰</button></div></div></nav>
+
+<section id="home" class="hero">
+<i class="blob b1"></i><i class="blob b2"></i>
+<div>
+<p class="hi">Hello, I’m</p>
+<h1><em>Vaishnavi Rameshwar Jagdale</em></h1>
+<div class="role"><b id="rt"></b></div>
+<p class="d">A passionate Computer Science student skilled in data analytics and full-stack development, building solutions that enhance multilingual communication and data-driven decision-making.</p>
+<a class="btn pri" data-s="proj">View My Projects</a><a class="btn sec" data-s="contact">Contact Me</a>
+</div>
+<div class="ph">
+<div class="ring"><div class="av" id="av"><span>VJ</span></div></div>
+<label class="up">📷 Add your photo<input type="file" id="fi" accept="image/*" hidden></label>
+</div>
+</section>
+
+<section id="about">
+<h2 class="rv">About <span>Me</span></h2>
+<p class="sub rv">Who I am and a few quick facts.</p>
+<div class="two">
+<div class="card rv"><h3>Professional Summary</h3><p>I am a passionate Computer Science student skilled in data analytics and full-stack development. I aspire to innovate solutions that enhance multilingual communication and data-driven decision-making, drawing on my experience in AI translation projects and data visualization.</p>
+<div class="stats"><div class="stat"><b>3</b><small>Projects</small></div><div class="stat"><b>9+</b><small>Months experience</small></div><div class="stat"><b>97.4%</b><small>Class X</small></div></div></div>
+<div class="card pd rv"><h3>Personal Details</h3>
+<div><span>Name</span><b>Vaishnavi R. Jagdale</b></div><div><span>Location</span><b>Pune, Maharashtra</b></div><div><span>Date of Birth</span><b>June 13, 2006</b></div><div><span>Gender</span><b>Female</b></div><div><span>Phone</span><b>+91-8668926307</b></div><div><span>Email</span><b>jagdalev1306@gmail.com</b></div></div>
+</div></section>
+
+<section id="edu">
+<h2 class="rv">My <span>Education</span></h2>
+<p class="sub rv">Academic journey and certifications.</p>
+<div class="tl">
+<div class="card rv"><span class="date">Graduation</span><h3>B.Tech / B.E. in Computer Science and Engineering (CSE)</h3><p>Modern Education Society’s College of Engineering, Pune</p></div>
+<div class="card rv"><span class="date">2023</span><h3>Class XII – Maharashtra</h3><p>Scored 71%</p></div>
+<div class="card rv"><span class="date">2021</span><h3>Class X – Maharashtra</h3><p>Scored 97.4%</p></div>
+<div class="card rv"><span class="date">Sep 2026 – Present</span><h3>AWS Certified Cloud Practitioner (CLF-C02)</h3><p>Certification course in cloud fundamentals.</p></div>
+</div></section>
+
+<section id="exp">
+<h2 class="rv">Work <span>Experience</span></h2>
+<p class="sub rv">Internships, roles and hackathons.</p>
+<div class="tl">
+<div class="card rv"><span class="date">Sep 2026 – Oct 2026</span><h3>Virtual Intern – Data Analytics, Workora India</h3><ul><li>Cleaned, analyzed, and visualized real-world datasets to find useful insights.</li><li>Strengthened analytical and problem-solving skills through practical tasks.</li></ul><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span></div>
+<div class="card rv"><span class="date">Oct 2025 – Jun 2026</span><h3>Event Management Coordinator, SIG AIML DS</h3><ul><li>Coordinated and managed club events for 9 months.</li></ul></div>
+<div class="card rv"><span class="date">Hackathon</span><h3>Participant, Smart India Hackathon (SIH)</h3><ul><li>Worked in a team to build a technology solution to a real-world problem.</li></ul></div>
+</div></section>
+
+<section id="proj">
+<h2 class="rv">My <span>Projects</span></h2>
+<p class="sub rv">Things I have built so far.</p>
+<div class="grid">
+<div class="card pj rv"><div class="ic">🌐</div><span class="date">Sep 2026 – Oct 2026</span><h3>EchoBridge</h3><p>A speech translation platform that converts spoken language into another language and delivers translated output to listeners. I built the frontend, including speaker/listener interfaces, language selection, and real-time broadcast.</p><span class="tag">React.js</span><span class="tag">Node.js</span><span class="tag">API Testing</span><span class="tag">AI Translation</span></div>
+<div class="card pj rv"><div class="ic">📝</div><span class="date">Web Tool</span><h3>Question Paper Generator</h3><p>A browser-based tool that generates formatted question papers from PDF, DOCX, TXT, and CSV question banks, with client-side data handling, automatic categorization, mark validation, question replacement, and Word/PDF export.</p><span class="tag">JavaScript</span><span class="tag">PDF</span><span class="tag">DOCX</span><span class="tag">CSV</span></div>
+<div class="card pj rv"><div class="ic">🚁</div><span class="date">AI Security</span><h3>Aegis-X DroneGuard</h3><p>A drone security and monitoring solution that detects and responds to potential drone-based threats using AI and real-time monitoring technologies.</p><span class="tag">AI</span><span class="tag">Real-time Monitoring</span><span class="tag">Security</span></div>
+</div></section>
+
+<section id="skills">
+<h2 class="rv">My <span>Skills</span></h2>
+<p class="sub rv">Technologies and tools I work with.</p>
+<div class="grid">
+<div class="card sk rv" style="--w:85%"><h3>Frontend</h3><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">React.js</span><div class="bar"><i></i></div></div>
+<div class="card sk rv" style="--w:70%"><h3>Backend</h3><span class="tag">Node.js</span><span class="tag">REST APIs</span><div class="bar"><i></i></div></div>
+<div class="card sk rv" style="--w:80%"><h3>Programming</h3><span class="tag">Python</span><span class="tag">C</span><span class="tag">C++</span><span class="tag">Java</span><div class="bar"><i></i></div></div>
+<div class="card sk rv" style="--w:82%"><h3>Data</h3><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Matplotlib</span><div class="bar"><i></i></div></div>
+<div class="card sk rv" style="--w:85%"><h3>Tools</h3><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><div class="bar"><i></i></div></div>
+</div></section>
+
+<section id="contact" class="ct">
+<h2 class="rv">Get In <span>Touch</span></h2>
+<p class="sub rv">Open to internships, projects and collaborations.</p>
+<div class="grid">
+<a class="card rv" href="mailto:jagdalev1306@gmail.com"><div class="e">✉️</div><h3>Email</h3><p>jagdalev1306@gmail.com</p></a>
+<a class="card rv" href="tel:+918668926307"><div class="e">📞</div><h3>Phone</h3><p>+91-8668926307</p></a>
+<a class="card rv" href="https://www.linkedin.com/in/vaishnavi-jagdale-0a72b330b" target="_blank" rel="noopener"><div class="e">💼</div><h3>LinkedIn</h3><p>Vaishnavi Jagdale</p></a>
+<a class="card rv" href="https://github.com/vjagdale1306" target="_blank" rel="noopener"><div class="e">💻</div><h3>GitHub</h3><p>vjagdale1306</p></a>
+</div></section>
+<footer>© 2026 Vaishnavi Rameshwar Jagdale · Built with 💙 in Pune</footer>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$$('[data-s]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();$('#'+a.dataset.s).scrollIntoView({behavior:'smooth'});$('#ln').classList.remove('open')}));
+$('#menu').onclick=()=>$('#ln').classList.toggle('open');
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
+$$('.rv').forEach((e,i)=>{e.style.transitionDelay=(i%4)*90+'ms';io.observe(e)});
+const so=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)$$('.links a').forEach(a=>a.classList.toggle('on',a.dataset.s===x.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+$$('section').forEach(s=>so.observe(s));
+const R=['Data Analytics Enthusiast','Full-Stack Developer','AI & Translation Explorer','Computer Science Student'];let ri=0,ci=0,del=false;
+(function t(){const w=R[ri];ci+=del?-1:1;$('#rt').textContent=w.slice(0,ci);let d=del?35:70;if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;ri=(ri+1)%R.length;d=300}setTimeout(t,d)})();
+$('#tg').onclick=()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=d?'light':'dark'};
+function setPh(u){$('#av').innerHTML='<img alt="Vaishnavi Jagdale" src="'+u+'">'}
+try{const p=localStorage.getItem('vj-photo');if(p)setPh(p)}catch(e){}
+$('#fi').onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{setPh(r.result);try{localStorage.setItem('vj-photo',r.result)}catch(e){}};r.readAsDataURL(f)};
+</script>
+</body>
+</html>
